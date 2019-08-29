@@ -22,4 +22,12 @@
         'basePath' => realpath(__DIR__ . '/../')
     ];
 
-5)
+5) tests
+>composer require "codeception/codeception:*"
+ vendor/bin/codecept
+ vendor/bin/codecept bootstrap
+ vendor/bin/codecept generate:cept acceptance TestGuestPages
+ vendor/bin/codecept run
+
+6) bootstrap
+>composer require "yiisoft/yii2-bootstrap:*"
