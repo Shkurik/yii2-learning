@@ -31,3 +31,6 @@
 
 6) bootstrap
 >composer require "yiisoft/yii2-bootstrap:*"
+
+7) Debug Extension for Yii 2
+https://www.yiiframework.com/extension/yiisoft/yii2-debug
