@@ -33,12 +33,12 @@
 >composer require "yiisoft/yii2-bootstrap:*"
 
 7) Debug Extension for Yii 2
-https://www.yiiframework.com/extension/yiisoft/yii2-debug
+>https://www.yiiframework.com/extension/yiisoft/yii2-debug
 mkdir('runtime');
 chmod 775 runtime, vendor
 
 8) tests
-vendor/bin/codecept generate:cept acceptance TestUserJoin
+>vendor/bin/codecept generate:cept acceptance TestUserJoin
 vendor/bin/codecept generate:stepobject acceptance TestUserJoin
 imagineUser
 joinUser
@@ -49,15 +49,14 @@ noUserLogged
 created class 'tests/_support/Step/Acceptance/TestUserJoin.php'
 
 9) console app
-php yii.php
+>php yii.php
 
 10) migrate DB
-php yii.php migrate/create create_user_table
+>php yii.php migrate/create create_user_table
 настроить db.config и запустить миграцию.
 php yii.php migrate
-
 можно удалить или установить миграцию
 php yii.php migrate/down or php yii.php migrate/up
 
 11) FAKER
-composer require "fzaninotto/faker:*"
+>composer require "fzaninotto/faker:*"
