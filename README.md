@@ -58,3 +58,6 @@ php yii.php migrate
 
 можно удалить или установить миграцию
 php yii.php migrate/down or php yii.php migrate/up
+
+11) FAKER
+composer require "fzaninotto/faker:*"
