@@ -11,6 +11,7 @@ return [
         'request' => [
             'cookieValidationKey' => 'super secret code'
         ],
+        'db' => require (__DIR__ . '/db.php'),
     ],
     'modules' => [
         'debug' => [
