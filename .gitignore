@@ -1,5 +1,6 @@
 .idea
 vendor
+runtime
 tests/_data/*
 tests/_output/debug/*.html
 tests/_output/*.html

@@ -2,19 +2,20 @@
 return [
     'id' => 'school',
     'basePath' => realpath(__DIR__ . '/../'),
-//    'bootstrap' => ['debug'],
+    'bootstrap' => ['debug'],
     'components' => [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false
         ],
-//        'request' => [
-//            'coockieValidationKey' => 'super secret code'
-//        ],
+        'request' => [
+            'cookieValidationKey' => 'super secret code'
+        ],
     ],
-//    'modules' => [
-//        'debug' => [
-//            'class' => 'yii\debug\Module',
-//        ],
-//    ],
+    'modules' => [
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'traceLine' => '<a href="phpstorm://open?url={file}&line={line}">{file}:{line}</a>',
+        ],
+    ],
 ];
