@@ -47,3 +47,6 @@ logoutUser
 isUserLogged
 noUserLogged
 created class 'tests/_support/Step/Acceptance/TestUserJoin.php'
+
+9) console app
+php yii.php
