@@ -50,3 +50,6 @@ created class 'tests/_support/Step/Acceptance/TestUserJoin.php'
 
 9) console app
 php yii.php
+
+10) migrate DB
+php yii.php migrate/create create_user_table 
