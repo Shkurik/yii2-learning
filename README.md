@@ -52,4 +52,9 @@ created class 'tests/_support/Step/Acceptance/TestUserJoin.php'
 php yii.php
 
 10) migrate DB
-php yii.php migrate/create create_user_table 
+php yii.php migrate/create create_user_table
+настроить db.config и запустить миграцию.
+php yii.php migrate
+
+можно удалить или установить миграцию
+php yii.php migrate/down or php yii.php migrate/up
