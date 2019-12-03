@@ -10,4 +10,4 @@ $I->amOnPage('/user/join');
 $I->see('Join us','h1');
 
 $I->amOnPage('/user/login');
-$I->see('Lon in','h1');
+$I->see('Log in','h1');

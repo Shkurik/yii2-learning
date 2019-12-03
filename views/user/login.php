@@ -1,6 +1,6 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h1>Lon in</h1>
+        <h1>Log in</h1>
     </div>
     <div class="panel-body">
         email </br>
