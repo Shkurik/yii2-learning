@@ -34,3 +34,5 @@
 
 7) Debug Extension for Yii 2
 https://www.yiiframework.com/extension/yiisoft/yii2-debug
+mkdir('runtime');
+chmod 775 runtime, vendor
