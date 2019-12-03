@@ -36,3 +36,14 @@
 https://www.yiiframework.com/extension/yiisoft/yii2-debug
 mkdir('runtime');
 chmod 775 runtime, vendor
+
+8) tests
+vendor/bin/codecept generate:cept acceptance TestUserJoin
+vendor/bin/codecept generate:stepobject acceptance TestUserJoin
+imagineUser
+joinUser
+loginUser
+logoutUser
+isUserLogged
+noUserLogged
+created class 'tests/_support/Step/Acceptance/TestUserJoin.php'
