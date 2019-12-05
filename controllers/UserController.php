@@ -13,8 +13,22 @@ class UserController extends Controller
 //        $userRecord = new UserRecord();
 //        $userRecord->setTestUser();
 //        $userRecord->save();
+        if(Yii::$app->request->isPost){
+            return $this->actionJoinPost();
+        }
+
+        $userRecord = new UserRecord();
+        $userRecord->setTestUser();
 
         $userJoinForm = new UserJoinForm();
+        $userJoinForm->setUserRecord($userRecord);
+
+        return $this->render('join', compact('userJoinForm'));
+    }
+    private function actionJoinPost()
+    {
+        $userJoinForm = new UserJoinForm();
+        $userJoinForm->load(Yii::$app->request->post());
         return $this->render('join', compact('userJoinForm'));
     }
 
