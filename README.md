@@ -60,3 +60,18 @@ php yii.php migrate/down or php yii.php migrate/up
 
 11) FAKER
 >composer require "fzaninotto/faker:*"
+
+12) Functional Testing
+>
+>vendor/bin/codecept generate:test functional PasswordHasher
+>
+>in tests/functional.suite.yml
+>    config:
+>        Yii2:
+>            configFile: 'config/web.php' 
+>
+>in codeception.yml
+>settings:
+     bootstrap: _bootstrap.php
+>
+>create file tests/functional/PasswordHasherTest.php
