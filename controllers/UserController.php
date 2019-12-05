@@ -10,9 +10,9 @@ use yii\web\Controller;
 class UserController extends Controller
 {
     public function actionJoin(){
-//        $userRecord = new UserRecord();
-//        $userRecord->setTestUser();
-//        $userRecord->save();
+/*        $userRecord = new UserRecord();
+        $userRecord->setTestUser();
+        $userRecord->save();*/
         if(Yii::$app->request->isPost){
             return $this->actionJoinPost();
         }
@@ -30,7 +30,10 @@ class UserController extends Controller
         $userJoinForm = new UserJoinForm();
         if ( $userJoinForm->load(Yii::$app->request->post())){
             if($userJoinForm->validate()){
-                $userJoinForm->name .= ' ok';
+                $userRecord = new UserRecord();
+                $userRecord->setUserJoinForm($userJoinForm);
+                $userRecord->save();
+                return $this->redirect('/user/login');
             }
         }
         return $this->render('join', compact('userJoinForm'));
