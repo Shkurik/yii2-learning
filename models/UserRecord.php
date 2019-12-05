@@ -29,4 +29,8 @@ class UserRecord extends ActiveRecord
         $this->passhash = $userJoinForm->password;
         $this->status = 1;
     }
+
+    public static function findUserByEmail($email){
+        return static::findOne(['email' => $email]);
+    }
 }

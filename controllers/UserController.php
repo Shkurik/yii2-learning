@@ -38,12 +38,28 @@ class UserController extends Controller
     }
 
     public function actionLogin(){
+        if(Yii::$app->request->isPost){
+            return $this->actionLoginPost();
+        }
         $userLoginForm = new UserLoginForm();
         return $this->render('login', compact('userLoginForm'));
+    }
+    private function actionLoginPost()
+    {
+        $userLoginForm = new UserLoginForm();
+        if ( $userLoginForm->load(Yii::$app->request->post())){
+            if($userLoginForm->validate()){
+                $userLoginForm->login();
+                return $this->redirect('/');
+            }
+        }
+        return $this->render('login', compact('userLoginForm'));
+
     }
 
     public function actionLogout(){
         Yii::$app->user->logout();
         return $this->redirect('/');
     }
+
 }
