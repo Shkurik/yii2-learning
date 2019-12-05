@@ -26,7 +26,7 @@ class UserIdentity extends UserRecord implements IdentityInterface
      */
     public function getId()
     {
-        $this->id;
+        return $this->id;
     }
 
     /**
