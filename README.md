@@ -75,5 +75,3 @@ php yii.php migrate/down or php yii.php migrate/up
      bootstrap: _bootstrap.php
 >
 >create file tests/functional/PasswordHasherTest.php
-
-
